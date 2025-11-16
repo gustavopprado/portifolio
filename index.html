@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gustavo do Prado Partica - Programador Full Stack</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Gustavo P. Partica</div>
+            <ul>
+                <li><a href="#inicio" data-key="navInicio">Início</a></li>
+                <li><a href="#experiencia" data-key="navExperiencia">Experiência</a></li>
+                <li><a href="#projetos" data-key="navProjetos">Projetos</a></li>
+                <li><a href="#habilidades" data-key="navHabilidades">Habilidades</a></li>
+                <li><a href="#contato" data-key="navContato">Contato</a></li>
+            </ul>
+
+            <div class="nav-right">
+                <div class="language-switcher">
+                    <a href="#" id="btn-pt" title="Português">
+                        <img src="src/brasil-flag.png" alt="Bandeira do Brasil">
+                    </a>
+                    <a href="#" id="btn-en" title="English">
+                        <img src="src/usa-flag.png" alt="Bandeira dos EUA">
+                    </a>
+                </div>
+                
+                <a href="#" id="btn-open-cv-modal" class="btn-header" data-key="btnCV">Download CV</a>
+                
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <div class="hero-content">
+                <span class="hero-subtitle" data-key="heroSubtitle">Programador Full Stack</span>
+                <h1 class="hero-title" data-key="heroTitle">Eu sou Gustavo do Prado Partica</h1>
+                
+                <p class="hero-description" data-key="heroDescription">
+                    Busco uma posição de Desenvolvedor Fullstack onde eu
+                    possa alavancar minha expertise completa no ciclo de desenvolvimento, desde o front-end(HTML, CSS, JavaScript/TypeScript, React) até o back-end (Node.js,
+                    Python), para projetar e entregar soluções web robustas, eficientes e
+                    escaláveis. Meu conhecimento em Bancos de Dados (SQL Server e NoSQL), DevOps
+                    (Docker, Git/GitHub) me permite contribuir com valor em todas as etapas do
+                    projeto.
+                </p>
+                
+                <div class="hero-links">
+                    <a href="https://www.linkedin.com/in/gustavo-prado-025750233" target="_blank" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/gustavopprado" target="_blank" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#contato" class="btn-primary" data-key="heroButton">Vamos Conversar <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="/src/foto.png" alt="Foto de Gustavo do Prado Partica">
+            </div>
+        </section>
+
+        <section id="experiencia" class="content-section">
+            <h2 class="section-title" data-key="titleExperiencia">Experiência Profissional</h2>
+            <div class="experience-item">
+                <div class="experience-header">
+                    <h3 data-key="expCargo">Analista de Suporte (com foco em Dev)</h3>
+                    <span class="experience-date" data-key="expData">2023 - Atual</span>
+                </div>
+                <p class="experience-company" data-key="expEmpresa">FGVTN Brasil</p>
+                <ul>
+                    <li data-key="expDesc1">Projeto de sistema de agendamento de frota com Node.js/Express e MySQL.</li>
+                    <li data-key="expDesc2">Desenvolvimento de um sistema E-commerce interno (Full Stack) com Python, HTML, CSS e Javascript.</li>
+                    <li data-key="expDesc3">Criação de sistema de "Boas-Vindas" para TV corporativa (Python, HTML, CSS).</li>
+                    <li data-key="expDesc4">Administração e manutenção de Servidor Windows e Active Directory (AD).</li>
+                    <li data-key="expDesc5">Prestação de suporte técnico (HelpDesk) a usuários internos e externos.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="projetos" class="content-section">
+            <h2 class="section-title" data-key="titleProjetos">Projetos em Destaque</h2>
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="src/silver limp.png" alt="Preview do projeto SilverLimp">
+                </div>
+                <div class="project-content">
+                    <h3 data-key="proj1Title">SilverLimp - Site Institucional e Catálogo Digital</h3>
+                    <p data-key="proj1Desc">Desenvolvimento de um site institucional focado em estabelecer a identidade visual da marca e servir como um catálogo digital. Implementação de design responsivo focado na experiência do usuário (UX).</p>
+                    <div class="project-tech">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>Vercel (Deploy)</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://silver-limp.vercel.app/" target="_blank" class="btn-secondary">
+                            <span data-key="proj1BtnVer">Ver Projeto</span> <i class="fas fa-external-link-alt"></i>
+                        </a>
+                        <a href="https://github.com/gustavopprado/silver_limp" target="_blank" class="btn-secondary-outline">
+                            <span data-key="proj1BtnRepo">Repositório</span> <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="habilidades" class="content-section">
+            <h2 class="section-title" data-key="titleHabilidades">Habilidades e Formação</h2>
+            <div class="skills-education-grid">
+                
+                <div class="skills-column">
+                    <h3 data-key="subtitleTecnologias">Tecnologias</h3>
+                    <div class="tech-list">
+                        <span>HTML</span> <span>CSS</span> <span>Javascript</span> <span>Typescript</span> <span>React</span> <span>Node.js</span> <span>Python</span> <span>Git</span> <span>Github</span> <span>SQL Server</span> <span>Docker</span> <span>Flutter</span> <span>Swift</span> <span>Kotlin</span>
+                    </div>
+
+                    <h3 class="skills-subtitle" data-key="subtitleIdiomas">Idiomas</h3>
+                    
+                    <div class="language-item-wrapper">
+                        <div class="language-item">
+                            <p><strong data-key="idioma1">Inglês</strong></p>
+                            <span data-key="idioma1Nivel">Nível B2 (Upper-Intermediate)</span>
+                        </div>
+                        <div class="language-item">
+                            <p><strong data-key="idioma2">Português</strong></p>
+                            <span data-key="idioma2Nivel">Nativo</span>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="education-column">
+                    <h3 data-key="subtitleFormacao">Formação Acadêmica</h3>
+                    <div class="education-item">
+                        <p><strong data-key="formacao1">Pós-Graduação em Desenvolvimento Full Stack</strong></p>
+                        <span data-key="formacao1Local">FIAP (Faculdade de Informática e Administração Paulista)</span>
+                        <small data-key="formacao1Data">Conclusão prevista: Abril 2026</small>
+                    </div>
+                    <div class="education-item">
+                        <p><strong data-key="formacao2">Tecnólogo em Análise e Desenvolvimento de Sistemas</strong></p>
+                        <span data-key="formacao2Local">UP (Universidade Positivo)</span>
+                        <small data-key="formacao2Data">Concluído: 2023</small>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="contact-section">
+            <h2 class="section-title" data-key="titleContato">Vamos Conversar?</h2>
+            <p data-key="contatoDesc">Estou aberto a novas oportunidades e propostas de colaboração.</p>
+            <div class="contact-info">
+                <a href="mailto:gustavopartica@gmail.com" class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>gustavopartica@gmail.com</span>
+                </a>
+                <a href="https://www.linkedin.com/in/gustavo-prado-025750233" target="_blank" class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="tel:+5541992198999" class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>(41) 99219-8999</span>
+                </a>
+            </div>
+            <p class="location" data-key="contatoLocal">Baseado em Curitiba - PR</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 - Gustavo do Prado Partica. <span data-key="footer">Feito com base no design de Gerold.</span></p>
+    </footer>
+
+
+    <div id="cv-modal" class="modal-overlay">
+        <div class="modal-content">
+            <span id="modal-close" class="modal-close">&times;</span>
+            <h3 data-key="modalCVTitle">Escolha o idioma do currículo</h3>
+            <div class="modal-buttons">
+                <a href="Gustavo_do_Prado_Partica_PT.pdf" download class="btn-secondary" data-key="modalCVBtnPT">
+                    Português <i class="fas fa-download"></i>
+                </a>
+                <a href="Gustavo_do_Prado_Partica_EN.pdf" download class="btn-secondary" data-key="modalCVBtnEN">
+                    Inglês <i class="fas fa-download"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+</html>

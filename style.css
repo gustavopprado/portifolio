@@ -1,0 +1,250 @@
+/* ======== CONFIGURAÇÕES GLOBAIS ======== */
+:root {
+    --cor-fundo: #0B0B0E;
+    --cor-fundo-secundaria: #15151A;
+    --cor-borda: #2a2a30;
+    --cor-acento: #7A00FF;
+    --cor-acento-hover: #9133FF;
+    --cor-texto-principal: #FFFFFF;
+    --cor-texto-secundaria: #A0A0A5;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; background-color: var(--cor-fundo); }
+body { font-family: 'Inter', sans-serif; color: var(--cor-texto-principal); line-height: 1.7; }
+section { padding: 80px 0; max-width: 1100px; margin: 0 auto; border-bottom: 1px solid var(--cor-borda); }
+h2.section-title { font-size: 2.5rem; font-weight: 700; margin-bottom: 40px; color: var(--cor-texto-principal); }
+
+/* ======== HEADER FIXO ======== */
+header { background-color: rgba(11, 11, 14, 0.85); backdrop-filter: blur(10px); border-bottom: 1px solid var(--cor-borda); padding: 20px 0; width: 100%; position: fixed; top: 0; z-index: 1000; }
+nav { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+nav .logo { font-size: 1.3rem; font-weight: 700; }
+nav ul { list-style: none; display: flex; flex-grow: 1; justify-content: center; }
+nav ul li { margin: 0 15px; }
+nav ul li a { color: var(--cor-texto-secundaria); text-decoration: none; font-weight: 500; transition: color 0.3s ease; }
+nav ul li a:hover { color: var(--cor-acento); }
+.nav-right { display: flex; align-items: center; gap: 25px; }
+
+/* ======== MODIFICADO: Estilos do seletor de idioma ======== */
+.language-switcher { display: flex; gap: 12px; }
+.language-switcher a {
+    /* Remove o sublinhado do link */
+    text-decoration: none; 
+    display: block; /* Garante que o link se ajuste à imagem */
+}
+.language-switcher img {
+    width: 28px; /* Tamanho da bandeira */
+    height: 28px;
+    border-radius: 50%; /* Deixa redonda */
+    object-fit: cover; /* Garante que a imagem cubra o círculo */
+    cursor: pointer;
+    transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    /* Inativo por padrão */
+    opacity: 0.5; 
+    border: 2px solid var(--cor-borda);
+}
+.language-switcher a:hover img {
+    transform: scale(1.1);
+    opacity: 1;
+}
+/* Classe 'active' que será controlada pelo JavaScript */
+.language-switcher a.active img {
+    opacity: 1;
+    border-color: var(--cor-acento); /* Destaca a bandeira ativa */
+    box-shadow: 0 0 10px rgba(122, 0, 255, 0.5);
+}
+/* ======== FIM DA MODIFICAÇÃO ======== */
+
+.btn-header { background-color: var(--cor-acento); color: var(--cor-texto-principal); padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 500; transition: background-color 0.3s ease; white-space: nowrap; }
+.btn-header:hover { background-color: var(--cor-acento-hover); }
+
+/* ======== SEÇÃO 1: INÍCIO (#inicio) ======== */
+main { padding-top: 80px; }
+.hero { display: flex; align-items: center; gap: 40px; min-height: calc(100vh - 80px); }
+.hero-content { flex: 3; }
+.hero-image { flex: 2; }
+.hero-subtitle { color: var(--cor-acento); font-weight: 600; font-size: 1.1rem; }
+.hero-title { font-size: 3.5rem; font-weight: 800; margin: 10px 0 20px 0; }
+.hero-description { font-size: 1.1rem; color: var(--cor-texto-secundaria); margin-bottom: 30px; }
+.hero-links { display: flex; align-items: center; gap: 20px; }
+.social-link { color: var(--cor-texto-secundaria); font-size: 1.8rem; transition: color 0.3s ease; }
+.social-link:hover { color: var(--cor-acento); }
+.btn-primary { background-color: var(--cor-acento); color: var(--cor-texto-principal); padding: 12px 25px; border-radius: 8px; text-decoration: none; font-weight: 600; transition: background-color 0.3s ease; }
+.btn-primary:hover { background-color: var(--cor-acento-hover); }
+.btn-primary i { margin-left: 5px; }
+.hero-image img { width: 100%; border-radius: 50%; border: 5px solid var(--cor-borda); aspect-ratio: 1/1; object-fit: cover; }
+
+/* ======== SEÇÃO 2: EXPERIÊNCIA (#experiencia) ======== */
+.experience-item { background-color: var(--cor-fundo-secundaria); padding: 30px; border-radius: 12px; border: 1px solid var(--cor-borda); }
+.experience-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px; }
+.experience-header h3 { font-size: 1.5rem; color: var(--cor-acento); }
+.experience-date { background-color: var(--cor-borda); color: var(--cor-texto-secundaria); padding: 5px 10px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; }
+.experience-company { font-size: 1.1rem; font-weight: 500; color: var(--cor-texto-principal); margin-bottom: 20px; }
+.experience-item ul { list-style-position: inside; margin-left: 5px; }
+.experience-item li { color: var(--cor-texto-secundaria); margin-bottom: 10px; }
+
+/* ======== SEÇÃO 3: PROJETOS (#projetos) ======== */
+.project-card { background-color: var(--cor-fundo-secundaria); border: 1px solid var(--cor-borda); border-radius: 12px; overflow: hidden; display: flex; gap: 30px; transition: box-shadow 0.4s ease, border-color 0.4s ease; }
+.project-card:hover { border-color: var(--cor-acento); box-shadow: 0 0 20px rgba(122, 0, 255, 0.2); }
+.project-image { flex: 1; background-color: #0B0B0E; align-self: stretch; overflow: hidden; }
+.project-image img { width: 100%; height: 100%; object-fit: cover; display: block; filter: grayscale(100%); opacity: 0.7; transition: all 0.4s ease-out; }
+.project-card:hover .project-image img { filter: grayscale(0%); opacity: 1; transform: scale(1.03); }
+.project-content { flex: 2; padding: 30px; }
+.project-content h3 { font-size: 1.6rem; margin-bottom: 15px; }
+.project-content p { color: var(--cor-texto-secundaria); margin-bottom: 20px; }
+.project-tech { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 25px; }
+.project-tech span { background-color: var(--cor-borda); color: var(--cor-texto-secundaria); padding: 5px 12px; border-radius: 20px; font-size: 0.9rem; }
+.btn-secondary { background-color: var(--cor-acento); color: var(--cor-texto-principal); padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 500; transition: background-color 0.3s ease; }
+.btn-secondary:hover { background-color: var(--cor-acento-hover); }
+.btn-secondary-outline { border: 2px solid var(--cor-acento); color: var(--cor-acento); padding: 8px 18px; border-radius: 8px; text-decoration: none; font-weight: 500; margin-left: 10px; transition: background-color 0.3s ease, color 0.3s ease; }
+.btn-secondary-outline:hover { background-color: var(--cor-acento); color: var(--cor-texto-principal); }
+.btn-secondary span, .btn-secondary-outline span { vertical-align: middle; }
+
+/* ======== SEÇÃO 4: HABILIDADES E FORMAÇÃO (#habilidades) ======== */
+.skills-education-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 40px; }
+.skills-column h3, .education-column h3 { font-size: 1.5rem; margin-bottom: 20px; border-bottom: 2px solid var(--cor-borda); padding-bottom: 10px; }
+.tech-list { display: flex; flex-wrap: wrap; gap: 12px; }
+.tech-list span { background-color: var(--cor-fundo-secundaria); color: var(--cor-texto-secundaria); padding: 8px 15px; border: 1px solid var(--cor-borda); border-radius: 8px; font-size: 1rem; font-weight: 500; }
+.skills-subtitle { font-size: 1.5rem; margin-top: 40px; margin-bottom: 20px; border-bottom: 2px solid var(--cor-borda); padding-bottom: 10px; }
+
+/* ======== MODIFICADO: Estilo para Idiomas ======== */
+.language-item-wrapper {
+    display: flex;
+    gap: 20px; /* Espaço entre os cards de idioma */
+}
+.language-item { 
+    background-color: var(--cor-fundo-secundaria); 
+    padding: 20px; 
+    border-radius: 8px; 
+    border: 1px solid var(--cor-borda); 
+    /* Faz os cards crescerem igualmente */
+    flex: 1; 
+}
+.language-item p { font-size: 1.1rem; font-weight: 600; }
+.language-item span { color: var(--cor-acento); font-weight: 500; }
+/* ======== FIM DA MODIFICAÇÃO ======== */
+
+.education-item { margin-bottom: 20px; }
+.education-item p { font-size: 1.1rem; font-weight: 600; }
+.education-item span { color: var(--cor-acento); font-weight: 500; }
+.education-item small { color: var(--cor-texto-secundaria); font-size: 0.9rem; }
+
+/* ======== SEÇÃO 5: CONTATO (#contato) ======== */
+.contact-section { text-align: center; border-bottom: none; }
+.contact-section h2 { font-size: 2.5rem; }
+.contact-section p { font-size: 1.2rem; color: var(--cor-texto-secundaria); max-width: 500px; margin: 0 auto 30px auto; }
+.contact-info { display: flex; justify-content: center; gap: 30px; margin-bottom: 20px; }
+.contact-item { color: var(--cor-texto-secundaria); text-decoration: none; font-size: 1.1rem; font-weight: 500; transition: color 0.3s ease; }
+.contact-item:hover { color: var(--cor-acento); }
+.contact-item i { margin-right: 8px; color: var(--cor-acento); }
+.location { font-size: 1rem !important; }
+
+/* ======== RODAPÉ ======== */
+footer { text-align: center; padding: 30px; background-color: var(--cor-fundo-secundaria); color: var(--cor-texto-secundaria); font-size: 0.9rem; }
+
+/* ======== RESPONSIVIDADE (MOBILE) ======== */
+@media (max-width: 992px) {
+    nav, section, main { padding-left: 20px; padding-right: 20px; }
+    .hero { flex-direction: column-reverse; text-align: center; padding-top: 40px; min-height: auto; }
+    .hero-title { font-size: 2.8rem; }
+    .hero-links { justify-content: center; }
+    .hero-image img { width: 250px; height: 250px; }
+    .project-card { flex-direction: column; }
+    .project-image { min-height: 200px; max-height: 250px; } 
+    .skills-education-grid { grid-template-columns: 1fr; }
+    nav { flex-wrap: wrap; justify-content: center; gap: 20px; }
+    nav ul { order: 3; width: 100%; justify-content: center; }
+    .nav-right { order: 2; }
+    .logo { order: 1; }
+    main { padding-top: 150px; }
+}
+@media (max-width: 768px) {
+    .hero-title { font-size: 2.2rem; }
+    h2.section-title { font-size: 2rem; }
+    .experience-header { flex-direction: column; align-items: flex-start; gap: 10px; }
+    .contact-info { flex-direction: column; gap: 20px; }
+    nav ul { gap: 5px; }
+    nav ul li { margin: 0 8px; }
+    /* Faz os cards de idioma ficarem um em cima do outro */
+    .language-item-wrapper { flex-direction: column; }
+}
+
+/* ======== ESTILOS DO MODAL DE DOWNLOAD ======== */
+.modal-overlay {
+    display: none; /* Escondido por padrão */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75); /* Fundo escuro semi-transparente */
+    backdrop-filter: blur(5px);
+    z-index: 2000; /* Acima de todo o resto */
+    
+    /* Para centralizar o conteúdo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Transição suave de entrada */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none; /* Não interage quando invisível */
+}
+
+/* Classe 'active' que o JavaScript vai adicionar */
+.modal-overlay.active {
+    display: flex;
+    opacity: 1;
+    pointer-events: all; /* Permite interação */
+}
+
+.modal-content {
+    background-color: var(--cor-fundo-secundaria);
+    padding: 30px 35px;
+    border-radius: 12px;
+    border: 1px solid var(--cor-borda);
+    width: 90%;
+    max-width: 450px;
+    position: relative;
+    text-align: center;
+
+    /* Efeito de "zoom" ao aparecer */
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+}
+
+.modal-overlay.active .modal-content {
+    transform: scale(1);
+}
+
+.modal-content h3 {
+    font-size: 1.6rem;
+    margin-bottom: 25px;
+    color: var(--cor-texto-principal);
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 2rem;
+    color: var(--cor-texto-secundaria);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+.modal-close:hover {
+    color: var(--cor-texto-principal);
+}
+
+.modal-buttons {
+    display: flex;
+    flex-direction: column; /* Botões um em cima do outro */
+    gap: 15px;
+}
+
+/* Reutilizando a classe de botão que já temos */
+.modal-buttons .btn-secondary {
+    display: block; /* Faz o link ocupar a largura toda */
+    width: 100%;
+    text-align: center;
+}
