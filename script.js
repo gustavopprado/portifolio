@@ -44,7 +44,6 @@ document.addEventListener('DOMContentLoaded', () => {
             'titleContato': 'Vamos Conversar?',
             'contatoDesc': 'Estou aberto a novas oportunidades e propostas de colaboração.',
             'contatoLocal': 'Baseado em Curitiba - PR',
-            'footer': 'Feito com base no design de Gerold.',
             'modalCVTitle': 'Escolha o idioma do currículo',
             'modalCVBtnPT': 'Português',
             'modalCVBtnEN': 'Inglês'
@@ -91,7 +90,6 @@ document.addEventListener('DOMContentLoaded', () => {
             'titleContato': "Let's Talk?",
             'contatoDesc': 'I am open to new opportunities and collaboration proposals.',
             'contatoLocal': 'Based in Curitiba - PR',
-            'footer': 'Based on the Gerold design.',
             'modalCVTitle': 'Choose the CV language',
             'modalCVBtnPT': 'Portuguese',
             'modalCVBtnEN': 'English'
